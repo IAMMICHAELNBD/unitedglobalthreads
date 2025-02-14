@@ -1,13 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
     <div className="text-center">
-      <h1 className="display-4">Welcome to Our Website</h1>
+      <h1 className="display-4">Welcome to United Global Threads</h1>
       <p className="lead">Explore the resources and information we provide.</p>
-      <button className="btn btn-primary btn-lg" onClick={() => alert("Welcome to our website!")}>
-        Get Started
-      </button>
+      {/* Link component used to navigate to the Contact page */}
+      <Link to="/contact" className="btn btn-primary btn-lg">
+        <i className="fas fa-star"></i> Contact Us
+      </Link>
     </div>
   );
 };

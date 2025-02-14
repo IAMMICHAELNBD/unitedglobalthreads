@@ -1,0 +1,22 @@
+.about-card {
+    background-color: #f8f9fa; /* Light background for card */
+    border: 1px solid #e0e0e0; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Spacing inside the card */
+    text-align: center; /* Centered text */
+    transition: transform 0.3s; /* Animation on hover */
+  }
+  
+  .about-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+  }
+  
+  .about-title {
+    color: #007bff; /* Primary color for titles */
+  }
+  
+  .about-text {
+    color: #555; /* Darker color for text */
+  }
+  
