@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 
-// Initialize EmailJS with your public API key
 emailjs.init('CfweQfskbtOoBc_bh');
 
 const Contact = () => {
@@ -21,48 +20,49 @@ const Contact = () => {
 
     emailjs.send('service_z7hbtyu', 'template_tv2wedo', formData)
       .then((response) => {
-        console.log('Message sent:', response.status, response.text);
         alert('Message sent successfully!');
         setFormData({ name: '', email: '', message: '' });
       })
       .catch((err) => {
-        console.error('Failed to send message:', err);
         alert('Failed to send message. Please try again later.');
       });
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
-        <label>Name:</label>
+      <div className="mb-3">
+        <label className="form-label">Name:</label>
         <input
           type="text"
+          className="form-control"
           name="name"
           value={formData.name}
           onChange={handleChange}
           required
         />
       </div>
-      <div>
-        <label>Email:</label>
+      <div className="mb-3">
+        <label className="form-label">Email:</label>
         <input
           type="email"
+          className="form-control"
           name="email"
           value={formData.email}
           onChange={handleChange}
           required
         />
       </div>
-      <div>
-        <label>Message:</label>
+      <div className="mb-3">
+        <label className="form-label">Message:</label>
         <textarea
+          className="form-control"
           name="message"
           value={formData.message}
           onChange={handleChange}
           required
         />
       </div>
-      <button type="submit">Send Message</button>
+      <button type="submit" className="btn btn-primary">Send Message</button>
     </form>
   );
 };
