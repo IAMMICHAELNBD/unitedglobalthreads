@@ -6,6 +6,7 @@ import Contact from './components/Contact';
 import './styles.css'; // Keep your custom styles 
 import 'bootstrap/dist/css/bootstrap.min.css'; // Add this line
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 const App = () => {
   return (
