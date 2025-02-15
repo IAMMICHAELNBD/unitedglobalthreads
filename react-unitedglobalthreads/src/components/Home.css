@@ -67,3 +67,46 @@
     margin-top: 10px; /* Space above images */
   }
   
+  /* Home.css */
+
+/* Default styles for sections, info panes, etc. remain the same */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Adjust heading sizes for smaller screens */
+    h1 {
+      font-size: 2.5rem; /* Smaller size for mobile */
+    }
+  
+    h2 {
+      font-size: 2rem; /* Smaller size for mobile */
+    }
+  
+    .lead {
+      font-size: 1.2rem; /* Adjust lead text size */
+    }
+  
+    /* Adjust padding for sections */
+    .section {
+      padding: 15px; /* Less padding on mobile */
+    }
+  
+    /* Adjust margins for panes */
+    .info-pane {
+      margin: 5px 0; /* Less margin for mobile */
+      padding: 15px; /* Less padding inside the panes */
+    }
+  
+    /* Style for buttons */
+    .btn-lg {
+      width: 100%; /* Make buttons full-width on mobile */
+      margin-top: 10px; /* Space above buttons */
+    }
+  
+    /* Image adjustments */
+    .info-pane img {
+      width: 100%; /* Ensure images fit within the pane */
+      height: auto; /* Maintain aspect ratio */
+    }
+  }
+  
