@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -15,41 +15,43 @@ const App = () => {
     AOS.init({
       duration: 1000, // Animation duration
       easing: 'ease-in-out', // Easing function
-      once: true, // Run animation only once
+      once: true, // Whether animation should happen only once
     });
   }, []);
 
   return (
     <Router>
       <div>
+        {/* Navbar Component */}
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/">United Global Threads</Link>
+            <NavLink className="navbar-brand" to="/">United Global Threads</NavLink>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link className="nav-link" to="/">
+                  <NavLink className="nav-link" to="/" activeClassName="active">
                     <i className="fas fa-home"></i> Home
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/about">
+                  <NavLink className="nav-link" to="/about" activeClassName="active">
                     <i className="fas fa-info-circle"></i> About Us
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/contact">
+                  <NavLink className="nav-link" to="/contact" activeClassName="active">
                     <i className="fas fa-envelope"></i> Contact
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
 
+        {/* Main Content */}
         <div className="container mt-4">
           <Routes>
             <Route path="/" element={<Home />} />

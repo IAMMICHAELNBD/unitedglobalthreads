@@ -9,7 +9,7 @@ const ArrowDown = () => (
     height="40" 
     viewBox="0 0 24 24" 
     fill="none" 
-    xmlns="http://www.w3.org/2000/svg" 
+    xmlns="http://www.w3.org/2000/svg"
     className="arrow-down"
   >
     <path d="M12 16L16 12H8L12 16Z" fill="currentColor" />
@@ -53,16 +53,18 @@ const Home = () => {
         <h1 className="display-4 mb-4" data-aos="fade-up">Community Support</h1>
         <p className="lead mb-5" data-aos="fade-up" data-aos-delay="100">Our mission is to support the community through various events.</p>
 
-        <div className="info-pane" data-aos="fade-up" data-aos-delay="200">
-          <p className="lead">We organize fundraising drives to support local families.</p>
-          <p>Details about how to participate and the impact of these drives.</p>
-        </div>
-        <div className="info-pane" data-aos="fade-up" data-aos-delay="300">
-          <p>Volunteer Opportunities: Join us to help your neighbors.</p>
-          <p>Information about how to sign up to help in the community.</p>
-        </div>
-        <div className="info-pane" data-aos="fade-up" data-aos-delay="400">
-          <p>Donation Drives: Contribute items to help our community during drives.</p>
+        <div className="info-container">
+          <div className="info-pane" data-aos="fade-up" data-aos-delay="200">
+            <p className="lead">We organize fundraising drives to support local families.</p>
+            <p>Details about how to participate and the impact of these drives.</p>
+          </div>
+          <div className="info-pane" data-aos="fade-up" data-aos-delay="300">
+            <p>Volunteer Opportunities: Join us to help your neighbors.</p>
+            <p>Information about how to sign up to help in the community.</p>
+          </div>
+          <div className="info-pane" data-aos="fade-up" data-aos-delay="400">
+            <p>Donation Drives: Contribute items to help our community during drives.</p>
+          </div>
         </div>
 
         <ArrowDown /> {/* Add Arrow here */}
@@ -73,30 +75,31 @@ const Home = () => {
         <h1 className="display-4 mb-4" data-aos="fade-up">Acceptable Items for Donation</h1>
         <p className="lead mb-5" data-aos="fade-up" data-aos-delay="100">Here are the items we accept for donation:</p>
         
-        {/* Individual panes for each acceptable item without images */}
-        <div className="info-pane" data-aos="fade-up" data-aos-delay="200">
-          <h5>1. Clothing</h5>
-          <p>We accept gently used clothing: jackets, shirts, pants, and more.</p>
-        </div>
-        
-        <div className="info-pane" data-aos="fade-up" data-aos-delay="300">
-          <h5>2. Non-perishable Food</h5>
-          <p>Donations can include canned goods, pasta, rice, and other shelf-stable items.</p>
-        </div>
-        
-        <div className="info-pane" data-aos="fade-up" data-aos-delay="400">
-          <h5>3. Toys and Games</h5>
-          <p>Please donate toys that are clean, safe, and in good working condition.</p>
-        </div>
-        
-        <div className="info-pane" data-aos="fade-up" data-aos-delay="500">
-          <h5>4. Books</h5>
-          <p>Children's books, adult fiction, and non-fiction books are welcomed.</p>
-        </div>
-        
-        <div className="info-pane" data-aos="fade-up" data-aos-delay="600">
-          <h5>5. Household Items</h5>
-          <p>We accept kitchenware, small appliances, and other household essentials.</p>
+        <div className="info-container">
+          <div className="info-pane" data-aos="fade-up" data-aos-delay="200">
+            <h5>1. Clothing</h5>
+            <p>We accept gently used clothing: jackets, shirts, pants, and more.</p>
+          </div>
+          
+          <div className="info-pane" data-aos="fade-up" data-aos-delay="300">
+            <h5>2. Non-perishable Food</h5>
+            <p>Donations can include canned goods, pasta, rice, and other shelf-stable items.</p>
+          </div>
+          
+          <div className="info-pane" data-aos="fade-up" data-aos-delay="400">
+            <h5>3. Toys and Games</h5>
+            <p>Please donate toys that are clean, safe, and in good working condition.</p>
+          </div>
+          
+          <div className="info-pane" data-aos="fade-up" data-aos-delay="500">
+            <h5>4. Books</h5>
+            <p>Children's books, adult fiction, and non-fiction books are welcomed.</p>
+          </div>
+          
+          <div className="info-pane" data-aos="fade-up" data-aos-delay="600">
+            <h5>5. Household Items</h5>
+            <p>We accept kitchenware, small appliances, and other household essentials.</p>
+          </div>
         </div>
 
         <ArrowDown /> {/* Add Arrow here */}

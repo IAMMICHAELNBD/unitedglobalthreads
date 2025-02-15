@@ -1,112 +1,118 @@
 /* Home.css */
 
-/* Ensure sections have a consistent background color */
+/* Entire body background */
+body {
+    background-color: #f0f2f5; /* Light off-white background for the whole page */
+}
+
+/* Section styles */
 .section {
-    background-color: #f8f9fa; /* Light grey background */
-    transition: background-color 0.5s ease; /* Smooth transition */
+    background-color: #ffffff; /* White background for sections */
     padding: 20px; /* Padding around the section */
-  }
-  
-  /* Styling for each info pane */
-  .info-pane {
-    background-color: #ffffff; /* White background for info panes */
+}
+
+/* Container for info panes */
+.info-container {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center items */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Styling for each info pane */
+.info-pane {
+    background-color: #ffffff; /* White for contrast */
     padding: 20px; /* Padding */
-    border-radius: 5px; /* Rounded corners */
-    margin: 10px 0; /* Margin between panes */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    border-radius: 10px; /* Rounder corners */
+    margin: 10px; /* Margin between panes */
+    box-shadow: 0 4px 20px rgba(155, 89, 182, 0.5); /* Purple shadow effect */
     transition: opacity 0.5s ease; /* Smooth appearance */
-  }
-  
-  /* Styling for the arrow */
-  .arrow-down {
+    flex: 0 1 300px; /* Allow growth and set base width, adjusted for responsiveness */
+    max-width: 300px; /* Limit maximum width */
+}
+
+/* Arrow styles for scroll indicator */
+.arrow-down {
     margin-top: 20px; /* Space above arrow */
     animation: bounce 1s infinite; /* Animation effect */
-  }
-  
-  /* Bounce Effect */
-  @keyframes bounce {
+}
+
+/* Bounce Effect */
+@keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0); /* No transformation at the start */
+        transform: translateY(0); /* No movement at start */
     }
     40% {
-      transform: translateY(-10px); /* Move up */
+        transform: translateY(-10px); /* Move up */
     }
     60% {
-      transform: translateY(-5px); /* Move down */
+        transform: translateY(-5px); /* Move down */
     }
-  }
-  
-  /* Button styling */
-  button,
-  .btn {
-    background-color: #007bff; /* Primary button color */
-    border: none; /* Remove borders */
-    color: white; /* Set text color */
-  }
-  
-  /* Ensure buttons maintain color on hover and focus */
-  button:hover,
-  .btn:hover,
-  button:focus,
-  .btn:focus {
-    background-color: #007bff; /* Keep the button color the same */
-    box-shadow: none; /* No shadow on focus */
-    outline: none; /* Remove default outline */
-  }
-  
-  /* Styles for headings */
-  h1, h2 {
+}
+
+/* Button styling */
+button,
+.btn {
+    background-color: #ffffff; /* White background for buttons */
+    border: 2px solid #9b59b6; /* Purple border */
+    color: #9b59b6; /* Purple text color */
+    font-weight: bold; /* Bold text */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 25px; /* Rounded buttons */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Button hover state */
+button:hover,
+.btn:hover {
+    background-color: rgba(155, 89, 182, 0.1); /* Light purple on hover */
+    color: #6f1d99; /* Dark purple text on hover */
+}
+
+/* Adjust headings slightly */
+h1, h2 {
     color: #343a40; /* Dark color for headings */
     text-align: center; /* Center heading text */
-  }
-  
-  /* Image styling */
-  .info-pane img {
-    max-width: 100%; /* Make images responsive */
-    height: auto; /* Maintain aspect ratio */
-    margin-top: 10px; /* Space above images */
-  }
-  
-  /* Home.css */
+}
 
-/* Default styles for sections, info panes, etc. remain the same */
+/* Navbar styles */
+.navbar {
+    background-color: #ffffff; /* White background for the navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    /* Adjust heading sizes for smaller screens */
-    h1 {
-      font-size: 2.5rem; /* Smaller size for mobile */
-    }
-  
-    h2 {
-      font-size: 2rem; /* Smaller size for mobile */
-    }
-  
-    .lead {
-      font-size: 1.2rem; /* Adjust lead text size */
-    }
-  
-    /* Adjust padding for sections */
-    .section {
-      padding: 15px; /* Less padding on mobile */
-    }
-  
-    /* Adjust margins for panes */
-    .info-pane {
-      margin: 5px 0; /* Less margin for mobile */
-      padding: 15px; /* Less padding inside the panes */
-    }
-  
-    /* Style for buttons */
-    .btn-lg {
-      width: 100%; /* Make buttons full-width on mobile */
-      margin-top: 10px; /* Space above buttons */
-    }
-  
-    /* Image adjustments */
-    .info-pane img {
-      width: 100%; /* Ensure images fit within the pane */
-      height: auto; /* Maintain aspect ratio */
-    }
-  }
-  
+.navbar .nav-link {
+    color: #6f1d99; /* Default dark purple for nav links */
+    transition: color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.navbar .nav-link:hover {
+    color: #9b59b6; /* Light purple on hover */
+    box-shadow: 0 4px 20px rgba(155, 89, 182, 0.5); /* Purple shadow on hover */
+}
+
+/* Active link styles */
+.navbar .nav-item.active .nav-link,
+.navbar .nav-link.active {
+    color: #9b59b6; /* Purple for the active link */
+    font-weight: bold; /* Bold for emphasis */
+    background-color: rgba(155, 89, 182, 0.2); /* Light purple background for active */
+    box-shadow: 0 4px 20px rgba(155, 89, 182, 0.5); /* Keep purple shadow for active link */
+}
+
+.navbar-brand {
+    color: #9b59b6; /* Purple for brand name */
+}
+
+.navbar-toggler {
+    border-color: rgba(155, 89, 182, 0.5); /* Purple border for toggler button */
+}
+
+.navbar-toggler-icon {
+    background-color: #9b59b6; /* Purple for toggler icon */
+}
+
+.section {
+    background-color: #ffffff; /* White background for sections */
+    padding: 20px; /* Padding around the section */
+    min-height: 60vh; /* Minimum height to ensure enough space for content */
+}

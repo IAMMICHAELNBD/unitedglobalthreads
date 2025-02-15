@@ -1,36 +1,31 @@
 import React from 'react';
-import './About.css'; // Create this CSS file for animations and custom styles
+import './About.css'; // Ensure your specific About styles are linked
 
 const About = () => {
   return (
-    <div className="container mt-5">
-      <h1 className="text-center mb-4">About Us</h1>
-      <div className="row">
-        <div className="col-lg-4 col-md-6 mb-4">
-          <div className="about-card animate__animated animate__fadeInLeft">
-            <h2 className="about-title">Our Mission</h2>
-            <p className="about-text">
-            At United Global Threads, our mission is to lead the charge in transforming textile waste into a powerful catalyst for positive change. We are dedicated to addressing the environmental crisis caused by discarded clothing while simultaneously empowering our community through charitable giving. By providing innovative recycling solutions, we help individuals responsibly dispose of unwanted textiles, ensuring that they are repurposed rather than ending up in landfills. <br /> We commit to donating a substantial portion of our proceeds to organizations fighting human trafficking and supporting those in need. We believe in the potential of every item we recycle to make a difference—not just for the environment, but for the lives of vulnerable individuals affected by exploitation.            </p>
-          </div>
+    <section className="section d-flex flex-column align-items-center justify-content-center text-center">
+      <h1 className="display-4 mb-4" data-aos="fade-up">About Us</h1>
+      <p className="lead mb-5" data-aos="fade-up" data-aos-delay="100">
+        Our organization is dedicated to making a positive impact in the community through donations and support.
+      </p>
+
+      <div className="info-container d-flex justify-content-center">
+        <div className="info-pane" data-aos="fade-up" data-aos-delay="200">
+          <h3>Our Mission</h3>
+          <p>We strive to create an inclusive, supportive environment where every individual can contribute to helping those in need.</p>
         </div>
-        <div className="col-lg-4 col-md-6 mb-4">
-          <div className="about-card animate__animated animate__fadeInUp">
-            <h2 className="about-title">Our Vision</h2>
-            <p className="about-text">
-            At United Global Threads, our vision is to establish a world where recycling and sustainability are at the forefront of every individual's and organization's actions. We aspire to create a future where discarded textiles are seen not as waste, but as valuable resources waiting to be repurposed and revitalized. <br/>We envision a society where communities are actively engaged in responsible disposal practices, ensuring that every piece of clothing, shoe, or textile is either recycled, reused, or donated, significantly reducing the burden on landfills and the environment. Our goal is to lead the charge in transforming how people think about their unwanted items, fostering a culture of mindfulness and appreciation for the planet’s finite resources.
-            </p>
-          </div>
+
+        <div className="info-pane" data-aos="fade-up" data-aos-delay="300">
+          <h3>Our Vision</h3>
+          <p>We envision a community where generosity and kindness are part of everyday life. Together, we can make a difference!</p>
         </div>
-        <div className="col-lg-4 col-md-6 mb-4">
-          <div className="about-card animate__animated animate__fadeInRight">
-            <h2 className="about-title">Our Values</h2>
-            <p className="about-text">
-            At United Global Threads, we hold steadfast to values that extend beyond recycling—we are committed to making a meaningful impact on our community and the world. Central to our mission is the belief that every action matters, and that’s why we strive to operate with integrity, compassion, and purpose. <br /> One of our core values is the power of giving back. We believe in the importance of donating a significant portion of our proceeds to charities that work tirelessly to uplift those in need, including organizations dedicated to abolishing human trafficking. We recognize the critical challenges faced by vulnerable populations, and we are passionate about contributing to efforts that provide support, resources, and hope for a brighter future.
-            </p>
-          </div>
+
+        <div className="info-pane" data-aos="fade-up" data-aos-delay="400">
+          <h3>Get Involved</h3>
+          <p>Join us in our efforts! Learn how you can help by visiting our donation page or contacting us for more information.</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

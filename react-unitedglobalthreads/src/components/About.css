@@ -1,22 +1,30 @@
-.about-card {
-    background-color: #f8f9fa; /* Light background for card */
-    border: 1px solid #e0e0e0; /* Light border */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Spacing inside the card */
-    text-align: center; /* Centered text */
-    transition: transform 0.3s; /* Animation on hover */
+/* About.css or Home.css (if combined) */
+
+/* Container for info panes, set to display flex */
+.info-container {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center the items horizontally */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
   }
   
-  .about-card:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+  /* Info pane styles for the About page */
+  .info-pane {
+    background-color: #ffffff; /* White for contrast */
+    padding: 20px; /* Padding */
+    border-radius: 10px; /* Rounder corners */
+    margin: 10px; /* Margin to give space */
+    box-shadow: 0 4px 20px rgba(155, 89, 182, 0.5); /* Purple shadow effect */
+    flex: 1; /* Allow the panes to grow and fill space */
+    max-width: 300px; /* Limit the width of the panes */
   }
   
-  .about-title {
-    color: #007bff; /* Primary color for titles */
+  /* Headings styles */
+  h1, h3 {
+    color: #6f1d99; /* Dark purple color for headings */
   }
   
-  .about-text {
-    color: #555; /* Darker color for text */
+  /* Lead paragraph style */
+  .lead {
+    color: #343a40; /* Dark grey color for paragraph text */
   }
   
