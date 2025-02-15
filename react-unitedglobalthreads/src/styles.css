@@ -42,3 +42,27 @@ body {
 h1, h2, h3 {
   color: #333; /* Dark color for headings */
 }
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slight scale effect on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.list-group-item {
+  background-color: #f8f9fa; /* Light background for list items */
+}
+
+section {
+  background-color: #f8f9fa; /* Light background color for visibility */
+  padding: 20px; /* Padding for inner space */
+}
+
+h1, h2 {
+  color: #333; /* Dark color for headings */
+}
+
+

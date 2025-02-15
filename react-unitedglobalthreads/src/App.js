@@ -1,14 +1,25 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
 import './styles.css'; // Keep your custom styles 
-import 'bootstrap/dist/css/bootstrap.min.css'; // Add this line
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS
+import '@fortawesome/fontawesome-free/css/all.min.css'; // Font Awesome
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Bootstrap JS
+import AOS from 'aos'; // Import AOS library
+import 'aos/dist/aos.css'; // Import AOS styles
 
 const App = () => {
+  // Initialize AOS inside useEffect
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      easing: 'ease-in-out', // Easing function
+      once: true, // Whether animation should happen only once - while scrolling down
+    });
+  }, []); // Empty dependency array to run only once
+
   return (
     <Router>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -51,4 +62,3 @@ const App = () => {
 };
 
 export default App;
-
